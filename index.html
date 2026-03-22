@@ -110,6 +110,26 @@
 
         .policy-section { margin-top: 25px; padding: 15px; background: var(--card-bg); border-radius: 12px; }
         .policy-links a { font-size: 14px; margin: 0 10px; color: var(--secondary); display: inline-block; padding: 5px 0; }
+
+        .project-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+    }
+
+    .project-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px; /* Standard App Icon curvature */
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #fff; /* Fallback color */
+    }
+
+    @media (max-width: 600px) {
+    .project-icon { width: 48px; height: 48px; border-radius: 10px; }
+    }
     </style>
 </head>
 <body>
@@ -129,18 +149,21 @@
 
         <div class="project-card">
             <h3 class="project-title">Jiggle Timer</h3>
+            <img src="icon_jt.png" alt="Jiggle Timer Icon" class="project-icon">
             <p class="project-desc">A tactile, reliable countdown timer designed for focus. Features haptic feedback and a minimalist interface for daily productivity.</p>
-            <span class="tag">Coming Soon</span>
+            <span class="tag">Coming Soon to Play Store</span>
         </div>
 
         <div class="project-card">
             <h3 class="project-title">Simple Notes</h3>
+            <img src="icon_sn.png" alt="Simple Notes Icon" class="project-icon">
             <p class="project-desc">A lightweight, distraction-free note-taking app designed for quick ideas and organized thoughts.</p>
-            <span class="tag">Coming Soon</span>
+            <span class="tag">Coming Soon to Play Store</span>
         </div>
 
         <div class="project-card">
             <h3 class="project-title">UFO Drift: Velocity</h3>
+            <img src="icon_ufo.png" alt="UFO Drift Icon" class="project-icon">
             <p class="project-desc">A precision-based drifting game featuring sleek UFO mechanics, cosmic environments, and high-speed challenges.</p>
             <a href="https://play.google.com/store/apps/details?id=com.thangpum.ufo_drift" target="_blank">
                 <img class="play-store-badge" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
@@ -158,8 +181,8 @@
                 <strong style="display: block; margin-bottom: 8px; font-size: 14px;">Privacy Policies</strong>
                 <div class="policy-links">
                     <a href="/privacy-simplenotes.html">Simple Notes</a>
-                    <a href="/jiggle-timer-privacy.html">Jiggle Timer</a>
-                    <a href="/ufo-drift-privacy.html">UFO Drift: Velocity</a>
+                    <a href="/privacy-jiggletimer.html">Jiggle Timer</a>
+                    <a href="https://sites.google.com/view/ufo-drift-privacy/home">UFO Drift: Velocity</a>
                 </div>
             </div>
 
