@@ -102,6 +102,24 @@
     .card-link { color: var(--green-dark); text-decoration: none; font-size: .88rem; font-weight: 700; }
     .card-link:hover { text-decoration: underline; }
     .mini-button { font-size: .85rem; padding: 10px 14px; }
+    .about-section { padding: 0 0 88px; }
+    .about-panel {
+      display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+      gap: clamp(24px, 5vw, 64px); align-items: start;
+      padding: clamp(28px, 5vw, 52px); background: var(--surface);
+      border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow);
+    }
+    .about-kicker {
+      margin: 0 0 12px; color: var(--green); font-size: .78rem; font-weight: 700;
+      letter-spacing: .08em; text-transform: uppercase;
+    }
+    .about-panel h2 { margin: 0; font-size: clamp(1.8rem, 4vw, 2.65rem); }
+    .about-copy p { margin: 0 0 15px; color: var(--muted); }
+    .about-copy p:last-of-type { margin-bottom: 0; }
+    .about-values { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 22px; }
+    .about-value { padding: 15px; border-radius: 16px; background: var(--bg); }
+    .about-value strong { display: block; margin-bottom: 5px; font-family: Manrope, sans-serif; font-size: .96rem; }
+    .about-value span { display: block; color: var(--muted); font-size: .83rem; line-height: 1.45; }
     .contact-band { padding: 0 0 86px; }
     .contact-panel {
       display: flex; align-items: center; justify-content: space-between; gap: 30px;
@@ -133,6 +151,8 @@
       .app-card { padding: 20px; }
       .section-head { align-items: start; flex-direction: column; }
       .contact-panel { align-items: start; flex-direction: column; }
+      .about-panel { grid-template-columns: 1fr; }
+      .about-values { grid-template-columns: 1fr; }
       .footer-inner { align-items: start; flex-direction: column; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -149,8 +169,8 @@
     </a>
     <nav aria-label="Main navigation">
       <a class="nav-apps" href="#apps">Apps &amp; Games</a>
-      <a class="button button-primary" href="mailto:contact.tpdigital@gmail.com?subject=Hello%20TP%20Digital">
-        Contact Developer <span aria-hidden="true">↗</span>
+      <a class="button button-primary" href="#about">
+        About the Developer <span aria-hidden="true">↓</span>
       </a>
     </nav>
   </header>
@@ -247,6 +267,25 @@
             <a class="card-link" href="https://sites.google.com/view/ufo-drift-privacy/home">Privacy</a>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section class="about-section wrap" id="about">
+      <div class="about-panel">
+        <div>
+          <p class="about-kicker">A little introduction</p>
+          <h2>Useful by nature.<br>Simple by design.</h2>
+        </div>
+        <div class="about-copy">
+          <p>Hello! I'm an independent developer who loves to build.</p>
+          <p>TP Digital is my space for turning ideas into simple apps, useful tools, and enjoyable games — made with curiosity, care, and a belief that good software doesn't need to be complicated.</p>
+          <p>I focus on creating practical experiences that make everyday life a little easier, while keeping things clear, approachable, and enjoyable to use.</p>
+          <div class="about-values">
+            <div class="about-value"><strong>Simple</strong><span>Clear experiences without unnecessary clutter.</span></div>
+            <div class="about-value"><strong>Practical</strong><span>Tools designed around real everyday needs.</span></div>
+            <div class="about-value"><strong>Enjoyable</strong><span>Small details that make apps feel good to use.</span></div>
+          </div>
+        </div>
       </div>
     </section>
 
