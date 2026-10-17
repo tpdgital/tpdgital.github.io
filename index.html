@@ -1,221 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP Digital | Developer Portfolio</title>
-    <style>
-        :root {
-            --bg: #ffffff;
-            --text: #1d1d1f;
-            --accent: #0071e3;
-            --secondary: #86868b;
-            --card-bg: #f5f5f7;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg: #000000;
-                --text: #f5f5f7;
-                --accent: #0a84ff;
-                --secondary: #a1a1a6;
-                --card-bg: #1c1c1e;
-            }
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        /* Studio Banner Section */
-        .banner {
-            width: 100%;
-            height: 300px;
-            background: #2c2c2e url('tp_banner.jpg') no-repeat center center;
-            background-size: cover;
-            position: relative;
-        }
-
-        /* Studio Icon - Overlapping the banner */
-        .brand-container {
-            max-width: 800px;
-            width: 90%;
-            position: relative;
-            margin-top: -60px;
-            margin-bottom: 40px;
-        }
-
-        .studio-icon {
-            width: 120px;
-            height: 120px;
-            background: white url('tp_icon.png') no-repeat center center;
-            background-size: cover;
-            border-radius: 28px;
-            border: 5px solid white;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-        }
-
-        .container {
-            max-width: 800px;
-            width: 90%;
-            padding-bottom: 80px;
-        }
-
-        header h1 { font-size: 42px; font-weight: 800; margin: 20px 0 5px; letter-spacing: -1px; }
-        .subtitle { font-size: 20px; color: var(--secondary); margin-bottom: 40px; }
-        
-        .section-title { font-size: 22px; font-weight: 600; margin: 40px 0 20px; border-bottom: 1px solid var(--card-bg); padding-bottom: 10px; }
-        
-        .project-card {
-            background: var(--card-bg);
-            padding: 28px;
-            border-radius: 24px;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
-        
-        .project-header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 12px;
-        }
-
-        .project-icon {
-            width: 64px;
-            height: 64px;
-            border-radius: 14px;
-            object-fit: cover;
-            padding: 2px; 
-            background-color: #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-        }
-
-        .project-title { font-size: 24px; font-weight: 700; margin: 0; }
-        .project-desc { color: var(--secondary); margin: 12px 0; font-size: 17px; line-height: 1.5; }
-        
-        .play-store-badge {
-            height: 50px;
-            margin-top: 15px;
-            margin-left: -8px; 
-            transition: opacity 0.2s;
-        }
-        .play-store-badge:hover { opacity: 0.8; }
-
-        .tag {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 600;
-            background: #e8e8ed;
-            color: #86868b;
-            padding: 4px 10px;
-            border-radius: 6px;
-            margin-top: 10px;
-        }
-
-        .footer-links { margin-top: 60px; text-align: center; border-top: 1px solid var(--card-bg); padding-top: 40px; }
-        .footer-links p { margin: 10px 0; }
-        a { color: var(--accent); text-decoration: none; font-weight: 500; }
-        a:hover { text-decoration: underline; }
-
-        .policy-section { margin-top: 25px; padding: 15px; background: var(--card-bg); border-radius: 12px; }
-        .policy-links a { font-size: 14px; margin: 0 10px; color: var(--secondary); display: inline-block; padding: 5px 0; }
-
-        @media (max-width: 600px) {
-            .project-icon { width: 48px; height: 48px; border-radius: 10px; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f5">
+  <meta name="description" content="Explore thoughtful mobile apps and games by TP Digital — practical tools for everyday life and playful experiences.">
+  <title>TP Digital — Thoughtfully made apps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f8f5;
+      --surface: #ffffff;
+      --ink: #20251f;
+      --muted: #687168;
+      --line: #e4e8e0;
+      --green: #426b50;
+      --green-dark: #31543d;
+      --green-soft: #e9f0e8;
+      --radius: 22px;
+      --shadow: 0 10px 35px rgba(34, 48, 36, .055);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      display: inline-flex; align-items: center; gap: 11px;
+      text-decoration: none; font-family: Manrope, sans-serif;
+      font-weight: 800; letter-spacing: -.045em; font-size: 1.13rem;
+    }
+    .brand-mark {
+      display: grid; place-items: center; width: 36px; height: 36px;
+      border-radius: 12px; background: var(--green); color: white;
+      font-size: .95rem; letter-spacing: -.04em;
+    }
+    nav { display: flex; align-items: center; gap: 28px; }
+    nav a { text-decoration: none; font-size: .92rem; color: var(--muted); }
+    nav a:hover { color: var(--ink); }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      border: 1px solid transparent; border-radius: 999px; padding: 12px 19px;
+      font: 600 .92rem "DM Sans", sans-serif; text-decoration: none;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+      cursor: pointer;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--green); color: #fff; }
+    .button-primary:hover { background: var(--green-dark); }
+    .button-secondary { background: var(--surface); border-color: var(--line); color: var(--ink); }
+    .button-secondary:hover { border-color: #c7d1c5; }
+    .hero { padding: 92px 0 76px; text-align: center; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; color: var(--green);
+      background: var(--green-soft); border-radius: 999px; padding: 7px 12px;
+      font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+    }
+    .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: #6d9a72; }
+    h1, h2, h3 { font-family: Manrope, sans-serif; letter-spacing: -.05em; line-height: 1.12; }
+    h1 { max-width: 780px; margin: 24px auto 18px; font-size: clamp(2.8rem, 7vw, 5.4rem); font-weight: 800; }
+    h1 span { color: var(--green); }
+    .hero-copy { max-width: 570px; margin: 0 auto; color: var(--muted); font-size: clamp(1rem, 2vw, 1.13rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; }
+    .hero-note { margin-top: 24px; color: #858d83; font-size: .84rem; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 26px; }
+    .section-head h2 { margin: 0 0 8px; font-size: clamp(1.8rem, 4vw, 2.5rem); }
+    .section-head p { margin: 0; color: var(--muted); }
+    .apps { padding: 34px 0 100px; }
+    .app-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .app-card {
+      display: flex; flex-direction: column; min-width: 0; background: var(--surface);
+      border: 1px solid var(--line); border-radius: var(--radius); padding: 23px;
+      box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .app-card:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(34,48,36,.09); }
+    .app-top { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+    .app-icon {
+      width: 68px; height: 68px; flex: 0 0 68px; object-fit: cover;
+      border-radius: 17px; background: #f0f2ed; border: 1px solid rgba(0,0,0,.04);
+    }
+    .app-category { margin: 0 0 4px; color: var(--muted); font-size: .76rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+    .app-card h3 { margin: 0; font-size: 1.25rem; letter-spacing: -.035em; }
+    .app-card p.description { margin: 0 0 22px; color: var(--muted); font-size: .94rem; flex: 1; }
+    .card-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .card-link { color: var(--green-dark); text-decoration: none; font-size: .88rem; font-weight: 700; }
+    .card-link:hover { text-decoration: underline; }
+    .mini-button { font-size: .85rem; padding: 10px 14px; }
+    .contact-band { padding: 0 0 86px; }
+    .contact-panel {
+      display: flex; align-items: center; justify-content: space-between; gap: 30px;
+      padding: clamp(28px, 5vw, 52px); border-radius: 28px;
+      background: #eaf0e8; border: 1px solid #dfe8dc;
+    }
+    .contact-panel h2 { margin: 0 0 10px; font-size: clamp(1.8rem, 4vw, 2.6rem); }
+    .contact-panel p { margin: 0; max-width: 510px; color: #5e6b5e; }
+    .contact-email { display: block; margin-top: 9px; color: var(--green-dark); font-size: .91rem; text-decoration: none; }
+    .contact-email:hover { text-decoration: underline; }
+    footer { border-top: 1px solid var(--line); padding: 26px 0 32px; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; color: var(--muted); font-size: .84rem; }
+    .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+    .footer-links a { text-decoration: none; }
+    .footer-links a:hover { color: var(--ink); }
+    @media (max-width: 850px) {
+      .app-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hero { padding-top: 72px; }
+    }
+    @media (max-width: 600px) {
+      .wrap { width: min(100% - 30px, 1120px); }
+      header { height: 72px; }
+      nav { gap: 12px; }
+      nav .nav-apps { display: none; }
+      nav a { font-size: .86rem; }
+      nav .button { padding: 10px 13px; font-size: .84rem; }
+      .hero { padding: 66px 0 55px; }
+      .app-grid { grid-template-columns: 1fr; gap: 13px; }
+      .app-card { padding: 20px; }
+      .section-head { align-items: start; flex-direction: column; }
+      .contact-panel { align-items: start; flex-direction: column; }
+      .footer-inner { align-items: start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
 </head>
 <body>
+  <header class="wrap">
+    <a class="brand" href="#" aria-label="TP Digital home">
+      <span class="brand-mark" aria-hidden="true">TP</span>
+      <span>TP Digital</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a class="nav-apps" href="#apps">Apps &amp; Games</a>
+      <a class="button button-primary" href="mailto:contact.tpdigital@gmail.com?subject=Hello%20TP%20Digital">
+        Contact Developer <span aria-hidden="true">↗</span>
+      </a>
+    </nav>
+  </header>
 
-    <div class="banner"></div>
+  <main>
+    <section class="hero wrap">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> Independent app developer</div>
+      <h1>Small apps.<br><span>Thoughtfully made.</span></h1>
+      <p class="hero-copy">Useful tools for everyday life and playful experiences for your downtime. Explore the apps and games made by TP Digital.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#apps">Explore the apps <span aria-hidden="true">↓</span></a>
+        <a class="button button-secondary" href="mailto:contact.tpdigital@gmail.com?subject=Hello%20TP%20Digital">✉ Contact Developer</a>
+      </div>
+      <p class="hero-note">Simple by design. Built with care.</p>
+    </section>
 
-    <div class="brand-container">
-        <div class="studio-icon"></div>
-        <header>
-            <h1>TP Digital</h1>
-            <p class="subtitle">Crafting immersive mobile experiences.</p>
-        </header>
+    <section class="apps wrap" id="apps">
+      <div class="section-head">
+        <div>
+          <h2>Apps &amp; Games</h2>
+          <p>A growing collection of tools, utilities and games.</p>
+        </div>
+      </div>
+
+      <div class="app-grid">
+        <article class="app-card">
+          <div class="app-top">
+            <img class="app-icon" src="https://tpdgital.github.io/icon_moneyleft.png" alt="Money Left app icon" onerror="this.style.display='none'">
+            <div><p class="app-category">Finance</p><h3>Money Left</h3></div>
+          </div>
+          <p class="description">A fast, minimalist expense tracker that helps you see what money you have left. Private, offline and free from clutter.</p>
+          <div class="card-actions">
+            <a class="button button-primary mini-button" href="https://play.google.com/store/apps/details?id=com.tpdigital.moneyleft" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-top">
+            <img class="app-icon" src="https://tpdgital.github.io/icon_focusrun.png" alt="Focus Run app icon" onerror="this.style.display='none'">
+            <div><p class="app-category">Focus &amp; Productivity</p><h3>Focus Run</h3></div>
+          </div>
+          <p class="description">A minimalist focus and study timer that helps you understand your attention, track interruptions and return to focus without guilt.</p>
+          <div class="card-actions">
+            <a class="button button-primary mini-button" href="https://play.google.com/store/apps/details?id=com.tpdigital.focusrun" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-top">
+            <img class="app-icon" src="https://tpdgital.github.io/icon_ts.png" alt="TriScan app icon">
+            <div><p class="app-category">Utilities</p><h3>TriScan</h3></div>
+          </div>
+          <p class="description">Scan documents, extract text with OCR, organize files and manage PDFs with a practical document toolkit.</p>
+          <div class="card-actions">
+            <a class="button button-primary mini-button" href="https://play.google.com/store/search?q=TriScan%20TP%20Digital&c=apps" target="_blank" rel="noopener noreferrer">Find on Google Play ↗</a>
+            <a class="card-link" href="https://tpdgital.github.io/privacy-triscan.html">Privacy</a>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-top">
+            <img class="app-icon" src="https://tpdgital.github.io/icon_jt.png" alt="Jiggle Timer app icon">
+            <div><p class="app-category">Timer &amp; Productivity</p><h3>Jiggle Timer</h3></div>
+          </div>
+          <p class="description">A tactile countdown timer for focus and study, with haptic feedback and a clean, minimalist interface.</p>
+          <div class="card-actions">
+            <a class="button button-primary mini-button" href="https://play.google.com/store/search?q=Jiggle%20Timer%20TP%20Digital&c=apps" target="_blank" rel="noopener noreferrer">Find on Google Play ↗</a>
+            <a class="card-link" href="https://tpdgital.github.io/privacy-jiggletimer.html">Privacy</a>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-top">
+            <img class="app-icon" src="https://tpdgital.github.io/icon_sn.png" alt="Simple Notes app icon">
+            <div><p class="app-category">Productivity</p><h3>Simple Notes</h3></div>
+          </div>
+          <p class="description">A lightweight, distraction-free place to capture quick ideas, keep checklists and organize everyday notes.</p>
+          <div class="card-actions">
+            <a class="button button-primary mini-button" href="https://play.google.com/store/search?q=Simple%20Notes%20TP%20Digital&c=apps" target="_blank" rel="noopener noreferrer">Find on Google Play ↗</a>
+            <a class="card-link" href="https://tpdgital.github.io/privacy-simplenotes.html">Privacy</a>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-top">
+            <img class="app-icon" src="https://tpdgital.github.io/icon_ufo.png" alt="UFO Drift Velocity game icon">
+            <div><p class="app-category">Game</p><h3>UFO Drift: Velocity</h3></div>
+          </div>
+          <p class="description">A precision drifting game with UFO controls, cosmic environments and high-speed challenges.</p>
+          <div class="card-actions">
+            <a class="button button-primary mini-button" href="https://play.google.com/store/search?q=UFO%20Drift%20Velocity&c=apps" target="_blank" rel="noopener noreferrer">Find on Google Play ↗</a>
+            <a class="card-link" href="https://sites.google.com/view/ufo-drift-privacy/home">Privacy</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-band wrap" id="contact">
+      <div class="contact-panel">
+        <div>
+          <h2>Have a question or an idea?</h2>
+          <p>For support, feedback, collaboration or anything else about the apps, send a message directly to the developer.</p>
+          <a class="contact-email" href="mailto:contact.tpdigital@gmail.com">contact.tpdigital@gmail.com</a>
+        </div>
+        <a class="button button-primary" href="mailto:contact.tpdigital@gmail.com?subject=Contact%20TP%20Digital">✉ Email the Developer <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a class="brand" href="#" aria-label="TP Digital home"><span class="brand-mark" aria-hidden="true">TP</span><span>TP Digital</span></a>
+      <span>© <span id="year">2026</span> TP Digital · Shillong, India</span>
+      <div class="footer-links">
+        <a href="mailto:contact.tpdigital@gmail.com">Contact</a>
+        <a href="https://tpdgital.github.io/app-ads.txt">app-ads.txt</a>
+      </div>
     </div>
-
-    <div class="container">
-        <h2 class="section-title">Games & Apps</h2>
-
-        <!-- TriScan App Added -->
-        <div class="project-card">
-            <div class="project-header">
-                <img src="icon_ts.png" alt="TriScan Icon" class="project-icon">
-                <h3 class="project-title">TriScan</h3>
-            </div>
-            <p class="project-desc">A professional document scanning and management utility featuring OCR functionality and an intuitive storage dashboard.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.tpdigital.triscan" target="_blank">
-                <img class="play-store-badge" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
-            </a>
-        </div>
-
-        <div class="project-card">
-            <div class="project-header">
-                <img src="icon_jt.png" alt="Jiggle Timer Icon" class="project-icon">
-                <h3 class="project-title">Jiggle Timer</h3>
-            </div>
-            <p class="project-desc">A tactile, reliable countdown timer designed for focus. Features haptic feedback and a minimalist interface for daily productivity.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.tpdigital.jiggle_timer" target="_blank">
-                <img class="play-store-badge" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
-            </a>
-        </div>
-
-        <div class="project-card">
-            <div class="project-header">
-                <img src="icon_sn.png" alt="Simple Notes Icon" class="project-icon">
-                <h3 class="project-title">Simple Notes</h3>
-            </div>
-            <p class="project-desc">A lightweight, distraction-free note-taking app designed for quick ideas and organized thoughts.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.tpdigital.simplenotes" target="_blank">
-                <img class="play-store-badge" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
-            </a>
-        </div>
-
-        <div class="project-card">
-            <div class="project-header">
-                <img src="icon_ufo.png" alt="UFO Drift Icon" class="project-icon">
-                <h3 class="project-title">UFO Drift: Velocity</h3>
-            </div>
-            <p class="project-desc">A precision-based drifting game featuring sleek UFO mechanics, cosmic environments, and high-speed challenges.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.thangpum.ufo_drift" target="_blank">
-                <img class="play-store-badge" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
-            </a>
-        </div>
-
-        <div class="footer-links">
-            <p>
-                <a href="mailto:contact@tpdigital.github.io">Support</a> &bull; 
-                <a href="https://tpdigital.github.io">GitHub</a> &bull; 
-                <a href="/app-ads.txt">Ad Spec</a>
-            </p>
-            
-            <div class="policy-section">
-                <strong style="display: block; margin-bottom: 8px; font-size: 14px;">Privacy Policies</strong>
-                <div class="policy-links">
-                    <a href="/privacy-triscan.html">TriScan</a>
-                    <a href="/privacy-simplenotes.html">Simple Notes</a>
-                    <a href="/privacy-jiggletimer.html">Jiggle Timer</a>
-                    <a href="https://sites.google.com/view/ufo-drift-privacy/home">UFO Drift: Velocity</a>
-                </div>
-            </div>
-
-            <p style="font-size: 13px; color: var(--secondary); margin-top: 30px;">
-                &copy; 2026 TP Digital | Shillong, India.
-            </p>
-        </div>
-    </div>
-
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
