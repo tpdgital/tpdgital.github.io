@@ -3,79 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Money Left</title>
+    <title>Privacy Policy - Money Left | TP Digital</title>
     <style>
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            line-height: 1.6; 
-            color: #2D2D2D; 
-            background-color: #FDFBF7; 
-            margin: 0; 
-            padding: 20px; 
+        :root {
+            --bg-primary: #090d16;
+            --bg-surface: #111827;
+            --bg-surface-elevated: #1f2937;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #38bdf8;
+            --border: #1e293b;
         }
-        .container { 
-            max-width: 800px; 
-            margin: 0 auto; 
-            background: #ffffff; 
-            padding: 40px; 
-            border-radius: 16px; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-        h1 { 
-            font-size: 28px; 
-            margin-bottom: 8px; 
-            color: #2D2D2D; 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 2rem 1rem;
         }
-        .effective-date { 
-            color: #666666; 
-            font-size: 14px; 
-            margin-bottom: 30px; 
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
-        h2 { 
-            font-size: 18px; 
-            margin-top: 24px; 
-            color: #2D2D2D; 
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
-        p, li { 
-            color: #444444; 
-            font-size: 15px; 
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
         }
-        ul { 
-            padding-left: 20px; 
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 2rem;
+            font-size: 0.925rem;
+            color: var(--text-secondary);
         }
-        li { 
-            margin-bottom: 8px; 
+        .meta strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        h2 {
+            font-size: 1.35rem;
+            color: #ffffff;
+            margin-top: 2.25rem;
+            margin-bottom: 0.85rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid var(--border);
+        }
+        h3 {
+            font-size: 1.1rem;
+            color: var(--accent);
+            margin-top: 1.25rem;
+            margin-bottom: 0.65rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        li ul {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        strong {
+            color: #ffffff;
+        }
+        code {
+            background-color: var(--bg-surface-elevated);
+            color: var(--accent);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.9em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.25rem 0 1.5rem;
+            background-color: var(--bg-primary);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        th, td {
+            padding: 0.85rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+        th {
+            background-color: var(--bg-surface-elevated);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .nav-links {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            th, td {
+                padding: 0.65rem;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Privacy Policy for Money Left</h1>
-        <div class="effective-date"><strong>Effective Date:</strong> September 26, 2026</div>
-        
-        <p>TP Digital ("we", "our", or "us") operates the Money Left mobile application (the "App"). This Privacy Policy explains how we handle your information when you use our application.</p>
-        
-        <h2>Our Commitment to Privacy</h2>
-        <p>Money Left is designed with a <strong>local-first architecture</strong>. All your financial logs, expense amounts, custom categories, remarks, savings goals, and historical records are stored strictly on your device using a secure local database.</p>
-        
-        <h2>Information Collection and Use</h2>
-        <ul>
-            <li><strong>Local Data Storage:</strong> All data generated while using Money Left remains entirely on your device. We do not collect, transmit, upload, or store your personal financial data, income records, or spending analytics on any external servers.</li>
-            <li><strong>No Personal Data Harvesting:</strong> We do not require account registration, login credentials, or personal identifiers (such as name, email address, or phone number) to use the core features of the App.</li>
-            <li><strong>Diagnostics and Updates:</strong> If you download updates via the Google Play Store, Google LLC may collect standard anonymous diagnostic data and crash logs in accordance with the Google Play Store Terms of Service.</li>
-        </ul>
-        
-        <h2>Third-Party Services</h2>
-        <p>The App may utilize standard platform services (such as Google Play services for app distribution and in-app updates) which operate under their own respective privacy policies. We do not share any user data with third-party advertisers or analytics networks.</p>
-        
-        <h2>Data Security & Backups</h2>
-        <p>Because your data is stored locally on your device, you maintain total ownership and control. If you use the optional offline backup feature, your exported data bundle (.mlbak) is stored directly by you. You can clear or delete all recorded history at any time by clearing app data or uninstalling the application.</p>
-        
-        <h2>Changes to This Privacy Policy</h2>
-        <p>We may update our Privacy Policy from time to time. Any changes will be posted within this section with an updated effective date.</p>
-        
-        <h2>Contact Us</h2>
-        <p>If you have any questions or suggestions about this Privacy Policy, please reach out via our developer profile or support channels under TP Digital.</p>
+        <header>
+            <h1>Privacy Policy for Money Left</h1>
+            <div class="meta">
+                <span><strong>Last Updated:</strong> November 22, 2026</span>
+                <span><strong>Publisher:</strong> TP Digital</span>
+                <span><strong>Platforms Covered:</strong> Android and Windows (Desktop)</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Introduction &amp; Core Philosophy</h2>
+            <p>At <strong>TP Digital</strong>, we believe your financial data is deeply personal and should remain strictly confidential. <strong>Money Left</strong> is engineered from the ground up as a <strong>100% local-first, offline-first personal and business ledger management application</strong>.</p>
+            <p>Whether you use Money Left on <strong>Android</strong>, <strong>Windows PC</strong>, or both, this Privacy Policy explains how your information is handled, stored, and protected.</p>
+
+            <h3>Our Fundamental Promise:</h3>
+            <ul>
+                <li><strong>Zero Cloud Custody:</strong> We do not operate cloud databases or external financial storage servers. Your financial data is never uploaded to, inspected by, or stored on TP Digital servers.</li>
+                <li><strong>Zero Account Registration:</strong> You do not need to create an account, log in, or provide an email, phone number, or personal identity to use Money Left.</li>
+                <li><strong>Zero Tracking &amp; Zero Ads:</strong> We do not embed advertising SDKs, behavioral analytics, data brokers, or marketing trackers.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Information Storage &amp; Local Architecture</h2>
+            <p>All data you input into Money Left—including expenses, income, recurring schedules, category allocations, project ring-fencing budgets, remarks, and receipt tags—is stored <strong>locally on your device</strong> in a structured, local SQLite database and local application storage.</p>
+            <ul>
+                <li><strong>On Android:</strong> Data is stored within the app’s sandboxed private storage directory.</li>
+                <li><strong>On Windows:</strong> Data is stored in your user-profile application data directory and user-designated local backup folders.</li>
+            </ul>
+            <p>At no point does TP Digital possess access, decryption keys, or visibility into your ledger records.</p>
+        </section>
+
+        <section>
+            <h2>3. Local Network Peer-to-Peer Synchronization (LAN / Wi-Fi)</h2>
+            <p>Money Left includes a multi-device synchronization engine that enables a Windows PC Hub to coordinate with linked Mobile Companion devices.</p>
+            <ul>
+                <li><strong>Local Network Only:</strong> Synchronization operates strictly <strong>peer-to-peer (P2P) over your private Local Area Network (Wi-Fi or LAN)</strong>.</li>
+                <li><strong>No Cloud Relays:</strong> Data payloads exchange directly between devices on your local network (default local port 8080). Sync data never transits through cloud servers, remote relays, or external proxies.</li>
+                <li><strong>Pairing Authentication:</strong> Devices pair using a transient 4-digit PIN code or local QR code containing local LAN IP and device pairing tokens.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Data Ownership, Independence &amp; Software Disclaimer</h2>
+            <ul>
+                <li><strong>100% User Ownership:</strong> You retain sole, exclusive ownership and legal custody of all data entered into the application.</li>
+                <li><strong>Independent Records:</strong> Money Left is strictly a record-keeping software tool. Neither Money Left nor TP Digital audits, certifies, verifies, or holds legal association with the transactions, accounts, or ledger data maintained by any individual or commercial entity.</li>
+                <li><strong>Statements &amp; Document Bearings:</strong> Reports, PDF statements, and spreadsheets generated or printed by Money Left bear the software application name and branding solely to identify the tool used to format the document. They do not indicate that the financial transactions, assets, or liabilities belong to, or are endorsed by, Money Left or TP Digital.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Device Permissions &amp; Why They Are Needed</h2>
+            <p>Money Left only requests permissions that are strictly necessary to deliver its offline and local-sync capabilities:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Permission</th>
+                        <th>Platform</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Camera</strong></td>
+                        <td>Android</td>
+                        <td>Used solely to scan the local desktop pairing QR code. Video or images are never recorded, saved, or uploaded.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Local Network / Wi-Fi</strong></td>
+                        <td>Android &amp; Windows</td>
+                        <td>Used exclusively to discover and transfer sync data between your own devices over your local Wi-Fi / LAN.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>File System / Storage</strong></td>
+                        <td>Android &amp; Windows</td>
+                        <td>Used strictly to export reports (PDF, Excel, CSV) and create or restore offline backup archives (<code>.mlbak</code>) at your direction.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Notification</strong> <em>(Optional)</em></td>
+                        <td>Android</td>
+                        <td>Used to alert you of due recurring payments or scheduled reminders set by you.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>6. Payments &amp; Licensing</h2>
+            <ul>
+                <li><strong>Android (Google Play):</strong> Optional Pro subscription upgrades are processed securely by <strong>Google Play Billing</strong> (Google LLC). Financial transaction details (e.g., credit card numbers, billing addresses) are handled directly by Google under their respective Privacy Policy and are never visible to or stored by Money Left.</li>
+                <li><strong>Windows PC:</strong> Inherits Pro capabilities directly from a licensed mobile companion device over local synchronization or via local verification without external tracking.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>7. Backups, Data Portability &amp; Complete Deletion</h2>
+            <ul>
+                <li><strong>Manual &amp; Automated Offline Backups:</strong> Money Left offers local backup snapshots (<code>.mlbak</code>). These portable backup archives reside exclusively on your local file system or user-chosen folder.</li>
+                <li><strong>Complete Data Deletion:</strong> Because all data is stored locally, you have total autonomy over its removal.
+                    <ul>
+                        <li>To wipe all data on Android, select <em>Clear Data</em> in Android Settings or uninstall the app.</li>
+                        <li>To wipe all data on Windows, use the in-app <em>Reset / Clear Data</em> option or uninstall the software.</li>
+                        <li>Deleting the app immediately and permanently erases all locally stored database files.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>8. Children’s Privacy</h2>
+            <p>Money Left is a general-purpose productivity and accounting tool that does not knowingly collect or solicit personal data from anyone, including children under the age of 13.</p>
+        </section>
+
+        <section>
+            <h2>9. Updates to This Policy</h2>
+            <p>We may periodically update this Privacy Policy to reflect application improvements or regulatory changes. The latest version will always be accessible directly within the application settings and our source repository.</p>
+        </section>
+
+        <section>
+            <h2>10. Contact Us</h2>
+            <p>If you have questions, feedback, or concerns regarding this Privacy Policy or our offline-first architecture, please contact us:</p>
+            <ul>
+                <li><strong>Developer:</strong> TP Digital</li>
+                <li><strong>Privacy Policy URL:</strong> <a href="https://tpdigital.example.com/money-left/privacy-policy">https://tpdigital.example.com/money-left/privacy-policy</a> <em>(Update with your live HTTPS URL before Microsoft Partner Center submission)</em></li>
+                <li><strong>Support Contact:</strong> <a href="mailto:support@tpdigital.example.com">support@tpdigital.example.com</a> <em>(Update with your active support email)</em></li>
+            </ul>
+        </section>
+
+        <footer class="nav-links">
+            <span>&copy; TP Digital</span>
+            <a href="terms-of-service.html">Terms of Service &rarr;</a>
+        </footer>
     </div>
 </body>
 </html>
